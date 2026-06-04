@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Industrial Safety Monitor</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f4f6f8;
+
+    font-family:Segoe UI,sans-serif;
+}
+
+.login-card{
+
+    width:380px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    text-align:center;
+}
+
+.logo{
+
+    font-size:60px;
+
+    margin-bottom:15px;
+}
+
+h1{
+
+    font-size:24px;
+
+    color:#111827;
+
+    margin-bottom:5px;
+}
+
+.subtitle{
+
+    color:#6b7280;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f3f4f6;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+button:hover{
+
+    opacity:0.95;
+}
+
+.footer{
+
+    margin-top:20px;
+
+    font-size:12px;
+
+    color:#9ca3af;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-card">
+
+<div class="logo">
+🏭
+</div>
+
+<h1>
+Industrial Safety Monitor
+</h1>
+
+<p class="subtitle">
+Authorized Personnel Access
+</p>
+
+<input
+type="password"
+id="pin"
+placeholder="Enter Access PIN">
+
+<button onclick="login()">
+Access System
+</button>
+
+<div class="footer">
+Industrial Hazard Monitoring System
+</div>
+
+</div>
+
+<script>
+
+function login()
+{
+    if(document.getElementById("pin").value==="IND2026")
+    {
+        localStorage.setItem("loggedIn","true");
+        window.location.href="dashboard.html";
+    }
+    else
+    {
+        alert("Invalid PIN");
+    }
+}
+
+</script>
+
+</body>
+</html>
